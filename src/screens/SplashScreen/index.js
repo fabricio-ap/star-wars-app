@@ -1,12 +1,12 @@
-import { Image, Text, View } from 'react-native';
-import logoImage from '../../../assets/image/logo-empire.png';
+import { View } from 'react-native';
+import { Logo, Text } from '../../components';
 import styles from './styles';
 
 export default function SplashScreen() {
   return (
     <View style={styles.container}>
-      <Image style={styles.logo} source={logoImage} />
-      <Text style={styles.titleText}>Star Wars - Wiki</Text>
+      <Logo />
+      <Text>Star Wars - Wiki</Text>
     </View>
   );
 }

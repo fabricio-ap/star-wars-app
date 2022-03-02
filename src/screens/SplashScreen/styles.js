@@ -10,14 +10,6 @@ const styles = StyleSheet.create({
   logo: {
     height: 64,
     width: 64
-  },
-  titleText: {
-    marginTop: 16,
-    fontStyle: 'normal',
-    fontWeight: 'bold',
-    fontSize: 24,
-    lineHeight: 30,
-    color: '#FFFFFF'
   }
 });
 
