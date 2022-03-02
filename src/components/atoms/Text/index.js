@@ -1,5 +1,5 @@
-import { View } from 'react-native';
+import { CustomText } from './styles';
 
-export default function Text() {
-  return <View />;
+export function Text({ children, color }) {
+  return <CustomText color={color}>{children}</CustomText>;
 }
