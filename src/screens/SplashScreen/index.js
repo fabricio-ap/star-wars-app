@@ -1,12 +1,10 @@
-import { View } from 'react-native';
-import { Logo, Text } from '../../components';
-import styles from './styles';
+import { Container, Logo, Text } from '../../components';
 
 export default function SplashScreen() {
   return (
-    <View style={styles.container}>
+    <Container align="center" justify="center">
       <Logo />
-      <Text>Star Wars - Wiki</Text>
-    </View>
+      <Text>StarWars - Wiki</Text>
+    </Container>
   );
 }
