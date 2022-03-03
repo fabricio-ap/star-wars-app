@@ -6,7 +6,9 @@ import {
   useFonts,
 } from '@expo-google-fonts/source-sans-pro';
 import AppLoading from 'expo-app-loading';
+import { ThemeProvider } from 'styled-components';
 import SplashScreen from './src/screens/SplashScreen';
+import { theme } from './src/styles';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -20,5 +22,9 @@ export default function App() {
     return <AppLoading />;
   }
 
-  return <SplashScreen />;
+  return (
+    <ThemeProvider theme={theme}>
+      <SplashScreen />
+    </ThemeProvider>
+  );
 }
