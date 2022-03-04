@@ -1,6 +1,6 @@
 import { Container, Logo, Text } from '../../components';
 
-export default function SplashScreen() {
+export function SplashScreen() {
   return (
     <Container align="center" justify="center">
       <Logo />

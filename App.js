@@ -7,7 +7,7 @@ import {
 } from '@expo-google-fonts/source-sans-pro';
 import AppLoading from 'expo-app-loading';
 import { ThemeProvider } from 'styled-components';
-import SplashScreen from './src/screens/SplashScreen';
+import { Routes } from './src/routes';
 import { theme } from './src/styles';
 
 export default function App() {
@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SplashScreen />
+      <Routes />
     </ThemeProvider>
   );
 }
