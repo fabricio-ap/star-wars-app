@@ -1,6 +1,11 @@
 import logoImage from '../../../../assets/image/logo-empire.png';
 import { LogoImage } from './styles';
 
-export function Logo() {
-  return <LogoImage source={logoImage} />;
+const sizes = {
+  small: 28,
+  large: 64,
+};
+
+export function Logo({ size }) {
+  return <LogoImage source={logoImage} size={sizes[size || 'large']} />;
 }
