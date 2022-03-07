@@ -8,7 +8,7 @@ import {
   HeroImageBackground,
 } from './styles';
 
-export function Hero({ item }) {
+export function Hero({ item, onDetail }) {
   const { image_url, title, subtitle, type } = item;
 
   return (
@@ -19,8 +19,8 @@ export function Hero({ item }) {
         }}
       >
         <HeroGradient colors={[colors.dark, 'transparent', colors.dark]}>
-          <Logo size="small" />
-          <Tag mt={220}>{type}</Tag>
+          {!onDetail && <Logo size="small" />}
+          <Tag mt={onDetail ? 224 : 200}>{type}</Tag>
           <Text fontFamily="bold" size={28} mt={12}>
             {title}
           </Text>
@@ -28,10 +28,12 @@ export function Hero({ item }) {
 
           <ButtonView>
             <IconButton label="Favoritos" iconName="add-circle-outline" />
-            <IconButton
-              label="Saiba Mais"
-              iconName="information-circle-outline"
-            />
+            {!onDetail && (
+              <IconButton
+                label="Saiba Mais"
+                iconName="information-circle-outline"
+              />
+            )}
           </ButtonView>
         </HeroGradient>
       </HeroImageBackground>

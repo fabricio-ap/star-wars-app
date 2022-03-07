@@ -1,4 +1,4 @@
-import { Hero, ScreenScrollContainer } from '~/components';
+import { GoBack, Hero, ScreenScrollContainer } from '~/components';
 import { useDataStore } from '~/services/stores';
 
 export function Detail() {
@@ -6,7 +6,8 @@ export function Detail() {
 
   return (
     <ScreenScrollContainer>
-      <Hero item={selectedData} />
+      <Hero item={selectedData} onDetail />
+      <GoBack />
     </ScreenScrollContainer>
   );
 }
