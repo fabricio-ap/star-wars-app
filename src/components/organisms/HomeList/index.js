@@ -1,26 +1,26 @@
 import { FlatList } from 'react-native';
+import { Text } from '~/components/atoms';
+import { theme } from '~/styles';
 import { Card } from '../../molecules';
+import { ListContainer } from './styles';
 
-const FAKE_DATA = [
-  {
-    id: 0,
-    image_url:
-      'https://images-na.ssl-images-amazon.com/images/I/51H--lU9YGL.jpg',
-  },
-  {
-    id: 1,
-    image_url:
-      'https://images-na.ssl-images-amazon.com/images/I/51H--lU9YGL.jpg',
-  },
-];
-
-export function HomeList() {
+export function HomeList({ data, title }) {
   return (
-    <FlatList
-      horizontal
-      data={FAKE_DATA}
-      renderItem={({ item }) => <Card item={item} />}
-      keyExtractor={(item) => item.id}
-    />
+    <ListContainer>
+      <Text fontFamily="black" size={18} ml={24}>
+        {title}
+      </Text>
+      <FlatList
+        horizontal
+        data={data}
+        renderItem={({ item }) => <Card item={item} />}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={{
+          paddingLeft: theme.metrics.px(24),
+          paddingTop: theme.metrics.px(12),
+          paddingBottom: theme.metrics.px(24),
+        }}
+      />
+    </ListContainer>
   );
 }
