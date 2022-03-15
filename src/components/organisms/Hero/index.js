@@ -1,5 +1,5 @@
 import { Logo, Text } from '~/components/atoms';
-import { IconButton, Tag } from '~/components/molecules';
+import { IconButton, PlayButton, Tag } from '~/components/molecules';
 import { colors } from '~/styles/colors';
 import {
   ButtonView,
@@ -28,6 +28,7 @@ export function Hero({ item, onDetail }) {
 
           <ButtonView>
             <IconButton label="Favoritos" iconName="add-circle-outline" />
+            <PlayButton />
             {!onDetail && (
               <IconButton
                 label="Saiba Mais"

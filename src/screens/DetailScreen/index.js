@@ -1,7 +1,7 @@
 import { GoBack, Hero, ScreenScrollContainer } from '~/components';
 import { useDataStore } from '~/services/stores';
 
-export function Detail() {
+export function DetailScreen() {
   const { selectedData } = useDataStore();
 
   return (
