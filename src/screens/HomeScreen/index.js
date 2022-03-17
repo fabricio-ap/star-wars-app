@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Hero, HomeList, ScreenScrollContainer } from '~/components';
+import { Hero, HomeList, Loader, ScreenScrollContainer } from '~/components';
 import { useGetData } from '~/services/hooks';
 
 export function HomeScreen() {
@@ -23,17 +23,17 @@ export function HomeScreen() {
     callGetData();
   }, []);
 
+  if (loading) {
+    return (
+      <ScreenScrollContainer>
+        <Loader />
+      </ScreenScrollContainer>
+    );
+  }
+
   return (
     <ScreenScrollContainer>
-      <Hero
-        item={{
-          image_url:
-            'https://cdna.artstation.com/p/assets/images/images/022/959/922/large/tyler-wetta-starwars-riseofskywalker24x36v2smaller-copy.jpg?1577472706',
-          title: 'Episódio IX',
-          subtitle: 'A Ascenção Skywalker',
-          type: 'Filme',
-        }}
-      />
+      <Hero item={films[0]} />
       <HomeList title="Filmes" data={films} />
       <HomeList title="Personagens" data={characters} />
     </ScreenScrollContainer>
