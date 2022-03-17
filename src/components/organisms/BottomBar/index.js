@@ -45,7 +45,7 @@ export function BottomBar({ state, descriptors, navigation }) {
 
         return (
           <BarItem
-            key={route.key}
+            key={index}
             accessibilityRole="button"
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}

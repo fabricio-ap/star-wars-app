@@ -33,9 +33,9 @@ export function HomeScreen() {
 
   return (
     <ScreenScrollContainer>
-      <Hero item={films[0]} />
-      <HomeList title="Filmes" data={films} />
-      <HomeList title="Personagens" data={characters} />
+      <Hero item={{ ...films[0], type: 'Filme' }} />
+      <HomeList title="Filmes" data={films} type="Filme" />
+      <HomeList title="Personagens" data={characters} type="Personagem" />
     </ScreenScrollContainer>
   );
 }

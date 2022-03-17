@@ -11,7 +11,9 @@ export function SplashScreen({ navigation }) {
   return (
     <Container align="center" justify="center">
       <Logo />
-      <Text fontFamily="bold">StarWars - Wiki</Text>
+      <Text fontFamily="bold" mt={12}>
+        StarWars - Wiki
+      </Text>
     </Container>
   );
 }
