@@ -4,14 +4,16 @@ import { Container, Logo, Text } from '../../components';
 export function SplashScreen({ navigation }) {
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('Home');
+      navigation.navigate('HomeScreen');
     }, 1000);
   }, [navigation]);
 
   return (
     <Container align="center" justify="center">
       <Logo />
-      <Text>StarWars - Wiki</Text>
+      <Text fontFamily="bold" mt={12}>
+        StarWars - Wiki
+      </Text>
     </Container>
   );
 }
